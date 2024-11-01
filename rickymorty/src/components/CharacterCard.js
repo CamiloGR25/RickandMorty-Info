@@ -25,7 +25,7 @@ const CharacterCard = ({ character }) => {
             <p>Estado: {character.status}</p>
             <p>Género: {character.gender}</p>
             <p>Origen: {character.origin.name}</p>
-            <p>Ubicación: {character.location.name}</p>
+            <p>Última ubicación: {character.location.name}</p>
             <button onClick={handleFavoriteToggle} className={isFavorite ? "favorite-button clicked" : "favorite-button"}>
                 {isFavorite ? "Eliminar de Favoritos" : "Añadir a Favoritos"}
             </button>

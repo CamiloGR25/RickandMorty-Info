@@ -1,21 +1,27 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CharacterCard from "../components/CharacterCard";
-import "../styles/CharactersPage.css";
+import NavegationBar from "../components/NavegationBar";
+import "../styles/FavoritesPages.css";
+
 const FavoritesPage = () => {
     const favorites = useSelector((state) => state.favorites);
 
     return (
         <div>
-            <h2>Favoritos</h2>
-            {favorites.length > 0 ? (
-                favorites.map((character) => (
+            <NavegationBar></NavegationBar>
+            <br></br><br></br>
+            <div className="title-container">
+                <h1>Favoritos</h1>
+                {favorites.length === 0 && <p id="P-favorite">No tienes favoritos seleccionados.</p>}
+            </div>
+            <div className="characters-container">
+                {favorites.length > 0 && favorites.map((character) => (
                     <CharacterCard key={character.id} character={character} />
-                ))
-            ) : (
-                <p>No tienes favoritos seleccionados.</p>
-            )}
+                ))}
+            </div>
         </div>
+
     );
 };
 

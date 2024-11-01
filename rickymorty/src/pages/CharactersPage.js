@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "../config";
 import CharacterCard from "../components/CharacterCard";
+import NavegationBar from "../components/NavegationBar";
 
 const CharactersPage = () => {
     const [characters, setCharacters] = useState([]);
@@ -16,6 +17,8 @@ const CharactersPage = () => {
     //mostrar la pagina con los datos de characterCard
     return (
         <div>
+            <NavegationBar></NavegationBar>
+            <br></br><br></br>
             <h1>Personajes de Rick and Morty</h1>
             <div className="characters-container">
                 {characters.map((character) => (

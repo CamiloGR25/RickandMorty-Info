@@ -11,6 +11,7 @@
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   }
   
   .character-card img {
@@ -32,7 +33,7 @@
     cursor: pointer;
   }
   .character-card button.clicked {
-    background-color: #c22020; /* Cambia a verde cuando se hace clic */
+    background-color: #c22020; /* Cambia a rojo cuando se hace clic */
   }
   
   .character-card button:hover {
