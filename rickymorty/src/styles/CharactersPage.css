@@ -1,0 +1,44 @@
+.characters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .character-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .character-card h3 {
+    margin: 10px 0;
+  }
+  
+  .character-card button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .character-card button.clicked {
+    background-color: #c22020; /* Cambia a verde cuando se hace clic */
+  }
+  
+  .character-card button:hover {
+    background-color: #0056b3;
+  }
+
+.character-card button.clicked:hover {
+  background-color: #8f1919; /* Mantiene el color cuando se pasa el cursor */
+}
