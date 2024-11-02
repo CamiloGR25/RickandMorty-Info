@@ -3,13 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../redux/slices/favoritesSlice";
 import "../styles/CharactersPage.css";
 
-const CharacterCard = ({ character }) => {
+const CharacterCard = ({ character, onInfo }) => {
     const dispatch = useDispatch();
     const isFavorite = useSelector((state) =>
         state.favorites.some((fav) => fav.id === character.id)
     );
 
-    const handleFavoriteToggle = () => {
+    const handleFavoriteToggle = (e) => {
+        e.stopPropagation(); // Evitar que el clic se propague al contenedor de la tarjeta
         if (isFavorite) {
             dispatch(removeFavorite(character));
         } else {
@@ -23,11 +24,11 @@ const CharacterCard = ({ character }) => {
             <h3>{character.name}</h3>
             <p>Especie: {character.species}</p>
             <p>Estado: {character.status}</p>
-            <p>Género: {character.gender}</p>
-            <p>Origen: {character.origin.name}</p>
-            <p>Última ubicación: {character.location.name}</p>
             <button onClick={handleFavoriteToggle} className={isFavorite ? "favorite-button clicked" : "favorite-button"}>
                 {isFavorite ? "Eliminar de Favoritos" : "Añadir a Favoritos"}
+            </button>
+            <button onClick={() => onInfo(character)} className="info-button">
+                Más Información
             </button>
         </div>
     );
