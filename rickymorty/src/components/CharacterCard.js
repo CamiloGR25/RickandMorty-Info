@@ -10,7 +10,6 @@ const CharacterCard = ({ character, onInfo }) => {
     );
 
     const handleFavoriteToggle = (e) => {
-        e.stopPropagation(); // Evitar que el clic se propague al contenedor de la tarjeta
         if (isFavorite) {
             dispatch(removeFavorite(character));
         } else {

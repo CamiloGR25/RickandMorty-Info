@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "../config";
 import NavegationBar from "../components/NavegationBar";
+import "../styles/EpisodesPages.css";
 
 const EpisodesPage = () => {
     const [episodes, setEpisodes] = useState([]);
@@ -21,7 +22,7 @@ const EpisodesPage = () => {
             <div className="episodes-container">
                 {episodes.map((episode) => (
                     <div key={episode.id} className="episode-card">
-                        <h2>{episode.name}</h2>
+                        <h2 className="episode-name">{episode.name}</h2>
                         <p><strong>Fecha de emisión:</strong> {episode.air_date}</p>
                         <p><strong>Episodio:</strong> {episode.episode}</p>
                     </div>
