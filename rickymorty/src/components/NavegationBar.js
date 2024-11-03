@@ -6,10 +6,10 @@ const NavegationBar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar-list">
-                <li><Link to="/personajes" className="nav-link">Personajes</Link></li>
+                <li><Link to="/" className="nav-link">Personajes</Link></li>
                 <li><Link to="/favoritos" className="nav-link">Personajes Favoritos</Link></li>
                 <li><Link to="/episodios" className="nav-link">Lista de Episodios</Link></li>
-
+                <li><Link to="/ubicacion" className="nav-link">Ubicaciones</Link></li>
             </ul>
         </nav>
     );
