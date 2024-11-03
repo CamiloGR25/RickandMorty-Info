@@ -7,6 +7,7 @@ import FavoritesPage from "./pages/FavoritesPage";
 import CharactersPage from "./pages/CharactersPage";
 import EpisodesPage from "./pages/EpisodesPage"
 import LocationsPage from "./pages/LocationsPage";
+
 const App = () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
